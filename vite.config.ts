@@ -6,9 +6,7 @@ import react from '@vitejs/plugin-react-swc'
 const path = require("path")
 export default defineConfig({
   resolve: {
-    alias: {
-      components: path.resolve('src/components'),
-    },
-  },
+    alias: [{ find: '@', replacement: '/src' }],
+   },
   plugins: [react()],
 })
