@@ -22,23 +22,46 @@ function Homepage() {
         {activeTab === "swap" && (
           <div>
             <div>
-              <div>You sell</div>
-              <div>Balance : 0</div>
+              <div>
+                <div>You sell</div>
+                <div>Balance : 0</div>
+              </div>
+              <div>
+                <div>
+                  <select name="tokens" id="">
+                    <option value="Napolite">Nap</option>
+                    <option value="Constantinite">Cons</option>
+                  </select>
+                </div>
+                <div>
+                  <input type="text" name="amount" />
+                </div>
+              </div>
+              <div>
+                <div>Napolite</div>
+                <div>no price</div>
+              </div>
             </div>
             <div>
               <div>
-                <select name="tokens" id="">
-                  <option value="Napolite">Nap</option>
-                  <option value="Constantinite">Cons</option>
-                </select>
+                <div>You sell</div>
+                <div>Balance : 0</div>
               </div>
               <div>
-                <input type="text" name="amount" />
+                <div>
+                  <select name="tokens" id="">
+                    <option value="Napolite">Nap</option>
+                    <option value="Constantinite">Cons</option>
+                  </select>
+                </div>
+                <div>
+                  <input type="text" name="amount" />
+                </div>
               </div>
-            </div>
-            <div>
-              <div>Napolite</div>
-              <div>no price</div>
+              <div>
+                <div>Napolite</div>
+                <div>no price</div>
+              </div>
             </div>
           </div>
         )}
