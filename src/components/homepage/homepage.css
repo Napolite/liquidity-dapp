@@ -33,3 +33,7 @@
 .tabs > div:hover {
   color: black;
 }
+
+.tabs > .activeTab {
+  color: black;
+}
