@@ -7,13 +7,13 @@ function Homepage() {
       <div className="homepage">
         <div className="tabs">
           <div
-            className={`${activeTab === "swap" && "activeTab"}`}
+            className={`${activeTab === "swap" ? "activeTab" : "tab"}`}
             onClick={() => setTab("swap")}
           >
             Swap
           </div>
           <div
-            className={`${activeTab === "Pool" && "activeTab"}`}
+            className={`${activeTab === "Pool" ? "activeTab" : "tab"}`}
             onClick={() => setTab("Pool")}
           >
             Liquidity
