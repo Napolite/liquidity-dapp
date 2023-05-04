@@ -1,0 +1,29 @@
+.app-root {
+  height: 100vh;
+}
+.nav-bar {
+  /* background-color: green; */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.nav-bar div {
+  background-color: rgb(39, 150, 39);
+  height: 47px;
+  width: 180px;
+  place-items: center;
+  place-content: center;
+  display: flex;
+  border-radius: 20px;
+  color: white;
+}
+
+.nav-bar div:hover {
+  background-color: rgb(130, 223, 130);
+  color: rgb(112, 110, 110);
+  cursor: default;
+}

@@ -4,9 +4,6 @@ function Homepage() {
   return (
     <div>
       <div>
-        <div>Connect Wallet</div>
-      </div>
-      <div>
         <div>Swap</div>
         <div>Liquidity</div>
       </div>
