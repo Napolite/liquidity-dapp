@@ -7,7 +7,7 @@ import "@/App.css";
 import { connectWallet } from "./actions";
 
 function Main() {
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState<any>(null);
 
   const connect = async () => {
     account === null ? setAccount(await connectWallet()) : null;
