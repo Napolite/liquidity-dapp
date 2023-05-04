@@ -1,7 +1,6 @@
 :root {
-  font-family: Noto;
-
-  font-synthesis: none;
+  font-family: NotoMid;
+  /* font-weight: bolder; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +10,11 @@
 @font-face {
   font-family: Noto;
   src: url("./assets/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: NotoMid;
+  src: url("./assets/fonts/NotoSans-Medium.ttf");
 }
 body {
   margin: 0;
