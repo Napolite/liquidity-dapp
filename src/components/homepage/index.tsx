@@ -20,13 +20,13 @@ function Homepage() {
           </div>
         </div>
         {activeTab === "swap" && (
-          <div>
-            <div>
-              <div>
+          <div className="swap-root">
+            <div className="swap-item">
+              <div className="swap-from-top">
                 <div>You sell</div>
                 <div>Balance : 0</div>
               </div>
-              <div>
+              <div className="trade-item">
                 <div>
                   <select name="tokens" id="">
                     <option value="Napolite">Nap</option>
@@ -42,7 +42,7 @@ function Homepage() {
                 <div>no price</div>
               </div>
             </div>
-            <div>
+            <div className="swap-item">
               <div>
                 <div>You sell</div>
                 <div>Balance : 0</div>
@@ -60,7 +60,10 @@ function Homepage() {
               </div>
               <div>
                 <div>Napolite</div>
-                <div>no price</div>
+                <div>
+                  <div>$0</div>
+                  <div>rate: 0</div>
+                </div>
               </div>
             </div>
           </div>

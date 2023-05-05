@@ -31,7 +31,7 @@
 }
 
 .tabs > .tab:hover {
-  color: rgb(97, 97, 216);
+  color: rgb(77, 240, 132);
 }
 
 .tabs > .activeTab {
@@ -41,3 +41,34 @@
   align-items: flex-end;
   color: black;
 }
+
+.swap-root {
+  height: 85%;
+  padding: 10px 0px;
+}
+
+/* .swap-item{
+
+} */
+.swap-from-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 13.4px;
+}
+
+.trade-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trade-item select {
+  height: 30px;
+  width: 120px;
+  border: none;
+  outline: none;
+}
+/* input {
+  width: 20px;
+} */
