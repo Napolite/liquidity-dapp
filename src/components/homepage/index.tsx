@@ -37,17 +37,17 @@ function Homepage() {
                   <input type="text" name="amount" />
                 </div>
               </div>
-              <div>
+              <div className="swap-from-top">
                 <div>Napolite</div>
-                <div>no price</div>
+                <div>$0</div>
               </div>
             </div>
             <div className="swap-item">
-              <div>
+              <div className="swap-from-top">
                 <div>You sell</div>
                 <div>Balance : 0</div>
               </div>
-              <div>
+              <div className="trade-item">
                 <div>
                   <select name="tokens" id="">
                     <option value="Napolite">Nap</option>
@@ -58,7 +58,7 @@ function Homepage() {
                   <input type="text" name="amount" />
                 </div>
               </div>
-              <div>
+              <div className="swap-from-top">
                 <div>Napolite</div>
                 <div>
                   <div>$0</div>

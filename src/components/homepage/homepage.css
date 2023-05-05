@@ -2,6 +2,7 @@
   width: 100%;
   height: 80vh;
   padding-top: 50px;
+  color: rgb(77, 76, 76);
 }
 
 .homepage {
@@ -43,13 +44,22 @@
 }
 
 .swap-root {
-  height: 85%;
+  height: 81%;
   padding: 10px 0px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-/* .swap-item{
-
-} */
+.swap-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
 .swap-from-top {
   display: flex;
   width: 100%;
@@ -64,11 +74,24 @@
 }
 
 .trade-item select {
-  height: 30px;
-  width: 120px;
+  height: 40px;
+  width: 160px;
   border: none;
   outline: none;
+  background: none;
+  font-size: 24px;
+  appearance: none;
+  text-align: center;
 }
-/* input {
-  width: 20px;
-} */
+.trade-item input {
+  height: 40px;
+  width: 60px;
+  border: 0;
+  font-size: 24px;
+  outline: none;
+  background-color: transparent;
+}
+
+.swap-item:nth-child(1) {
+  background-color: rgb(173, 255, 201);
+}
