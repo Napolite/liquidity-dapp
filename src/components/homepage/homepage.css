@@ -7,8 +7,8 @@
 
 .homepage {
   margin: auto;
-  padding: 15px;
-  width: 32%;
+  padding: 5px 15px;
+  width: 28%;
   height: 73.4%;
   border: 1px solid black;
   border-radius: 20px;
@@ -18,8 +18,9 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   align-content: flex-end;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 .img-div {
@@ -29,17 +30,15 @@
 }
 
 .img-div > img {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 .tabs {
   display: flex;
-  width: 50%;
-  padding-left: 20px;
-  height: 50px;
+  width: 40%;
   justify-content: space-around;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .tabs > .tab {
@@ -136,7 +135,7 @@
 }
 
 .swap-root button {
-  height: 45px;
+  height: 40px;
   border-radius: 10px;
   width: 100%;
   margin: 0 auto;

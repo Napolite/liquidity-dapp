@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./homepage.css";
 
-import settings from "@/assets/images/—Pngtree—settings glyph black icon_3755352.png";
+import settings from "@/assets/images/settings-1389-svgrepo-com.svg";
 import eth from "@/assets/images/pngwing.com.png";
 function Homepage() {
   const [activeTab, setTab] = useState<any>("swap");
@@ -45,7 +45,7 @@ function Homepage() {
               </div>
               <div className="swap-from-top">
                 <div></div>
-                <div>$0</div>
+                <div></div>
               </div>
             </div>
             <div className="swap-item">
@@ -66,7 +66,7 @@ function Homepage() {
               <div className="swap-from-top">
                 <div></div>
                 <div>
-                  <div>rate: 0</div>
+                  <div></div>
                 </div>
               </div>
             </div>
