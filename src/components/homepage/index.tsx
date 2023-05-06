@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import "./homepage.css";
+
+import settings from "@/assets/images/—Pngtree—settings glyph black icon_3755352.png";
 function Homepage() {
   const [activeTab, setTab] = useState<any>("swap");
   return (
     <div className="homepage-root">
       <div className="homepage">
-        <div className="tabs">
-          <div
-            className={`${activeTab === "swap" ? "activeTab" : "tab"}`}
-            onClick={() => setTab("swap")}
-          >
-            Swap
+        <div className="top-bar">
+          <div className="tabs">
+            <div
+              className={`${activeTab === "swap" ? "activeTab" : "tab"}`}
+              onClick={() => setTab("swap")}
+            >
+              Swap
+            </div>
+            <div
+              className={`${activeTab === "Pool" ? "activeTab" : "tab"}`}
+              onClick={() => setTab("Pool")}
+            >
+              Liquidity
+            </div>
           </div>
-          <div
-            className={`${activeTab === "Pool" ? "activeTab" : "tab"}`}
-            onClick={() => setTab("Pool")}
-          >
-            Liquidity
+          <div className="img-div">
+            <img src={settings} alt="setting" />
           </div>
         </div>
         {activeTab === "swap" && (
