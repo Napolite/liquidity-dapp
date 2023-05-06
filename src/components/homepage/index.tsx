@@ -51,7 +51,6 @@ function Homepage() {
             <div className="swap-item">
               <div className="swap-from-top">
                 <div>You sell</div>
-                <div>Balance : 0</div>
               </div>
               <div className="trade-item">
                 <div>
@@ -67,11 +66,11 @@ function Homepage() {
               <div className="swap-from-top">
                 <div></div>
                 <div>
-                  <div>$0</div>
                   <div>rate: 0</div>
                 </div>
               </div>
             </div>
+            <button>Swap</button>
           </div>
         )}
       </div>
