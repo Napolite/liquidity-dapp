@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./homepage.css";
 
 import settings from "@/assets/images/—Pngtree—settings glyph black icon_3755352.png";
+import eth from "@/assets/images/pngwing.com.png";
 function Homepage() {
   const [activeTab, setTab] = useState<any>("swap");
   return (
@@ -34,18 +35,16 @@ function Homepage() {
                 <div>Balance : 0</div>
               </div>
               <div className="trade-item">
-                <div>
-                  <select name="tokens" id="">
-                    <option value="Napolite">Nap</option>
-                    <option value="Constantinite">Cons</option>
-                  </select>
+                <div className="token">
+                  <img src={eth} className="token-img" />
+                  <div>Nap</div>
                 </div>
                 <div>
                   <input type="text" name="amount" />
                 </div>
               </div>
               <div className="swap-from-top">
-                <div>Napolite</div>
+                <div></div>
                 <div>$0</div>
               </div>
             </div>
@@ -56,17 +55,17 @@ function Homepage() {
               </div>
               <div className="trade-item">
                 <div>
-                  <select name="tokens" id="">
-                    <option value="Napolite">Nap</option>
-                    <option value="Constantinite">Cons</option>
-                  </select>
+                  <div className="token">
+                    <img src={eth} className="token-img" />
+                    <div>Nap</div>
+                  </div>
                 </div>
                 <div>
                   <input type="text" name="amount" />
                 </div>
               </div>
               <div className="swap-from-top">
-                <div>Napolite</div>
+                <div></div>
                 <div>
                   <div>$0</div>
                   <div>rate: 0</div>
