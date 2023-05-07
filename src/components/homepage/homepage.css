@@ -5,11 +5,21 @@
   color: rgb(77, 76, 76);
   display: flex;
   flex-direction: row-reverse;
-  background-color: green;
+  justify-content: center;
+}
+
+.slide-out {
+  padding: 5px 15px;
+  width: 18%;
+  height: 67.4%;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-right: -40px;
+  margin-top: 17px;
 }
 
 .homepage {
-  margin: auto;
+  background-color: white;
   padding: 5px 15px;
   width: 28%;
   height: 73.4%;
