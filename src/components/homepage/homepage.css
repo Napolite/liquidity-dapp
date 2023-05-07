@@ -3,6 +3,9 @@
   height: 80vh;
   padding-top: 50px;
   color: rgb(77, 76, 76);
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: green;
 }
 
 .homepage {
