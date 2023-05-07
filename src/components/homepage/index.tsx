@@ -76,16 +76,14 @@ function Homepage() {
         )}
       </div>
       <div className="slide-out">
-        <div>hello</div>
-        <div>world</div>
-        <div>hello</div>
-        <div>world</div>
-        <div>hello</div>
-        <div>world</div>
-        <div>hello</div>
-        <div>world</div>
-        <div>hello</div>
-        <div>world</div>
+        <div>
+          <img src={eth} />
+          <div>Napolite</div>
+        </div>
+        <div>
+          <img src={eth} />
+          <div>Napolite</div>
+        </div>
       </div>
     </div>
   );

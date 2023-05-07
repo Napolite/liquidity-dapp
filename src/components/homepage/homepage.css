@@ -9,9 +9,9 @@
 }
 
 .slide-out {
-  padding: 20px 0;
-  width: 18%;
-  max-height: 60.4%;
+  padding: 17px 0;
+  width: 20%;
+  max-height: 62.4%;
   overflow-y: scroll;
   border: 1px solid black;
   border-radius: 20px;
@@ -20,14 +20,20 @@
 }
 
 .slide-out div {
-  width: 100%;
+  width: 82.5%;
   height: 50px;
   display: flex;
   place-items: center;
+  padding: 0px 15px;
+}
+
+.slide-out img {
+  width: 30px;
+  height: 30px;
 }
 
 .slide-out div:nth-child(odd) {
-  background-color: green;
+  background-color: rgb(211, 234, 253);
 }
 
 .homepage {
