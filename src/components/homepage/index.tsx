@@ -48,7 +48,8 @@ function Homepage() {
                     slider === false
                       ? (sliderRef.current.style.animation =
                           "slide-out 1s forwards")
-                      : console.log("animation");
+                      : (sliderRef.current.style.animation =
+                          "slide-in 1s forwards");
                   }}
                 >
                   <img src={eth} className="token-img" />

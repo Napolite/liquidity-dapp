@@ -38,6 +38,15 @@
   }
 }
 
+@keyframes slide-in {
+  0% {
+    margin-right: -40px;
+  }
+  100% {
+    margin-right: -272px;
+  }
+}
+
 .slide-out img {
   width: 30px;
   height: 30px;
