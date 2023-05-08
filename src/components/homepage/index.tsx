@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./homepage.css";
 
 import settings from "@/assets/images/settings-1389-svgrepo-com.svg";
 import eth from "@/assets/images/pngwing.com.png";
 function Homepage() {
-  const [activeTab, setTab] = useState<any>("swap");
+  const [activeTab, setTab] = useState<String>("swap");
+  const [slider, setSlider] = useState<Boolean>(false);
+
+  const sliderRef = useRef<any>(null);
+
+  const slideOut = () => {};
+
   return (
     <div className="homepage-root">
       <div className="homepage">
@@ -35,7 +41,16 @@ function Homepage() {
                 <div>Balance : 0</div>
               </div>
               <div className="trade-item">
-                <div className="token">
+                <div
+                  className="token"
+                  onClick={() => {
+                    setSlider(!slider);
+                    slider === false
+                      ? (sliderRef.current.style.animation =
+                          "slide-out 1s forwards")
+                      : console.log("animation");
+                  }}
+                >
                   <img src={eth} className="token-img" />
                   <div>Nap</div>
                 </div>
@@ -75,7 +90,8 @@ function Homepage() {
           </div>
         )}
       </div>
-      <div className="slide-out">
+
+      <div className="slide-out" ref={sliderRef}>
         <div>
           <img src={eth} />
           <div>Napolite</div>
