@@ -158,7 +158,8 @@
   background-color: rgb(211, 253, 225);
 }
 .swap-item:nth-child(2) {
-  background-color: rgb(211, 234, 253);
+  /* background-color: rgb(211, 234, 253); */
+  border: 1px solid rgb(211, 234, 253);
 }
 
 .token-img {

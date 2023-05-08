@@ -4,12 +4,35 @@ import "./homepage.css";
 import settings from "@/assets/images/settings-1389-svgrepo-com.svg";
 import eth from "@/assets/images/pngwing.com.png";
 function Homepage() {
+  interface Token {
+    name: String;
+    address: String;
+    symbol: String;
+  }
   const [activeTab, setTab] = useState<String>("swap");
   const [slider, setSlider] = useState<Boolean>(false);
 
-  const sliderRef = useRef<any>(null);
+  const [from, setFrom] = useState<Token>({
+    name: "Napolite",
+    address: "Unknown",
+    symbol: "Nap",
+  });
 
-  const slideOut = () => {};
+  const [to, setTo] = useState<Token>({
+    name: "Constantine",
+    address: "Unknown",
+    symbol: "Con",
+  });
+
+  const [selected, setSelected] = useState<String>("");
+
+  const tokens = [
+    { name: "Napolite", address: "unknown", symbol: "Nap" },
+    { name: "Constantine", address: "unknown", symbol: "Con" },
+    { name: "Scudite", address: "unknown", symbol: "Scu" },
+  ];
+
+  const sliderRef = useRef<any>(null);
 
   return (
     <div className="homepage-root">
@@ -44,6 +67,7 @@ function Homepage() {
                 <div
                   className="token"
                   onClick={() => {
+                    setSelected("From");
                     setSlider(!slider);
                     slider === false
                       ? (sliderRef.current.style.animation =
@@ -53,7 +77,7 @@ function Homepage() {
                   }}
                 >
                   <img src={eth} className="token-img" />
-                  <div>Nap</div>
+                  <div>{from.symbol}</div>
                 </div>
                 <div>
                   <input type="text" name="amount" />
@@ -75,6 +99,7 @@ function Homepage() {
                     className="token"
                     onClick={() => {
                       setSlider(!slider);
+                      setSelected("To");
                       slider === false
                         ? (sliderRef.current.style.animation =
                             "slide-out 1s forwards")
@@ -83,7 +108,7 @@ function Homepage() {
                     }}
                   >
                     <img src={eth} className="token-img" />
-                    <div>Nap</div>
+                    <div>{to.symbol}</div>
                   </div>
                 </div>
                 <div>
@@ -103,14 +128,16 @@ function Homepage() {
       </div>
 
       <div className="slide-out" ref={sliderRef}>
-        <div>
-          <img src={eth} />
-          <div>Napolite</div>
-        </div>
-        <div>
-          <img src={eth} />
-          <div>Napolite</div>
-        </div>
+        {tokens.map((token) => (
+          <div
+            onClick={() => {
+              selected === "From" ? setFrom(token) : setTo(token);
+            }}
+          >
+            <img src={eth} />
+            <div>{token.symbol}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
