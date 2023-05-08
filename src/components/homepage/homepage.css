@@ -15,8 +15,9 @@
   overflow-y: scroll;
   border: 1px solid black;
   border-radius: 20px;
-  margin-right: -40px;
+  margin-right: -272px;
   margin-top: 15px;
+  /* animation: slide-out 1s forwards; */
 }
 
 .slide-out div {
@@ -25,6 +26,16 @@
   display: flex;
   place-items: center;
   padding: 0px 15px;
+}
+
+@keyframes slide-out {
+  0% {
+    margin-right: -272px;
+  }
+
+  100% {
+    margin-right: -40px;
+  }
 }
 
 .slide-out img {
