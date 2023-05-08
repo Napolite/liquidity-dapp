@@ -71,7 +71,17 @@ function Homepage() {
               </div>
               <div className="trade-item">
                 <div>
-                  <div className="token">
+                  <div
+                    className="token"
+                    onClick={() => {
+                      setSlider(!slider);
+                      slider === false
+                        ? (sliderRef.current.style.animation =
+                            "slide-out 1s forwards")
+                        : (sliderRef.current.style.animation =
+                            "slide-in 1s forwards");
+                    }}
+                  >
                     <img src={eth} className="token-img" />
                     <div>Nap</div>
                   </div>

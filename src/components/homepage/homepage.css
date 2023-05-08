@@ -172,6 +172,7 @@
   display: flex;
   width: 120px;
   place-items: center;
+  cursor: pointer;
 }
 
 .swap-root button {
