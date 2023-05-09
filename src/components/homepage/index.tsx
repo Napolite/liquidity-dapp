@@ -10,7 +10,8 @@ function Homepage() {
     symbol: String;
   }
   const [activeTab, setTab] = useState<String>("swap");
-  const [slider, setSlider] = useState<Boolean>(false);
+  const [fromSlider, setFromSlider] = useState<Boolean>(false);
+  const [toSlider, setToSlider] = useState<Boolean>(false);
 
   const [from, setFrom] = useState<Token>({
     name: "Napolite",
@@ -68,12 +69,13 @@ function Homepage() {
                   className="token"
                   onClick={() => {
                     setSelected("From");
-                    setSlider(!slider);
-                    slider === false
+                    setFromSlider(!fromSlider);
+                    setToSlider(!toSlider);
+                    fromSlider === false
                       ? (sliderRef.current.style.animation =
-                          "slide-out 1s forwards")
+                          "slide-out 0.5s forwards")
                       : (sliderRef.current.style.animation =
-                          "slide-in 1s forwards");
+                          "slide-in 0.5s forwards");
                   }}
                 >
                   <img src={eth} className="token-img" />
@@ -98,13 +100,15 @@ function Homepage() {
                   <div
                     className="token"
                     onClick={() => {
-                      setSlider(!slider);
+                      setToSlider(!toSlider);
+                      setFromSlider(!fromSlider);
+
                       setSelected("To");
-                      slider === false
+                      toSlider === false
                         ? (sliderRef.current.style.animation =
-                            "slide-out 1s forwards")
+                            "slide-out 0.5s forwards")
                         : (sliderRef.current.style.animation =
-                            "slide-in 1s forwards");
+                            "slide-in 0.5s forwards");
                     }}
                   >
                     <img src={eth} className="token-img" />
@@ -128,6 +132,7 @@ function Homepage() {
       </div>
 
       <div className="slide-out" ref={sliderRef}>
+        <div>{selected === "From" ? "From" : "To"}</div>
         {tokens.map((token) => (
           <div
             onClick={() => {
