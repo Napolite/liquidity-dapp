@@ -70,7 +70,7 @@ function Homepage() {
                   onClick={() => {
                     setSelected("From");
                     setFromSlider(!fromSlider);
-                    setToSlider(!toSlider);
+                    setToSlider(false);
                     fromSlider === false
                       ? (sliderRef.current.style.animation =
                           "slide-out 0.5s forwards")
@@ -101,7 +101,7 @@ function Homepage() {
                     className="token"
                     onClick={() => {
                       setToSlider(!toSlider);
-                      setFromSlider(!fromSlider);
+                      setFromSlider(false);
 
                       setSelected("To");
                       toSlider === false
@@ -132,7 +132,9 @@ function Homepage() {
       </div>
 
       <div className="slide-out" ref={sliderRef}>
-        <div>{selected === "From" ? "From" : "To"}</div>
+        <div style={{ display: "fixed" }}>
+          {selected === "From" ? "From" : "To"}
+        </div>
         {tokens.map((token) => (
           <div
             onClick={() => {
