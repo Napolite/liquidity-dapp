@@ -14,6 +14,8 @@ function Homepage() {
   const [fromSlider, setFromSlider] = useState<Boolean>(false);
   const [toSlider, setToSlider] = useState<Boolean>(false);
   const [selected, setSelected] = useState<String>("");
+  const [amount, setAmount] = useState<any>(0);
+  const [rate, setRate] = useState<Number>(0);
 
   const [from, setFrom] = useState<Token>({
     name: "Napolite",
@@ -28,15 +30,6 @@ function Homepage() {
   });
 
   const tokens = [
-    { name: "Napolite", address: "unknown", symbol: "Nap" },
-    { name: "Constantine", address: "unknown", symbol: "Con" },
-    { name: "Scudite", address: "unknown", symbol: "Scu" },
-    { name: "Napolite", address: "unknown", symbol: "Nap" },
-    { name: "Constantine", address: "unknown", symbol: "Con" },
-    { name: "Scudite", address: "unknown", symbol: "Scu" },
-    { name: "Napolite", address: "unknown", symbol: "Nap" },
-    { name: "Constantine", address: "unknown", symbol: "Con" },
-    { name: "Scudite", address: "unknown", symbol: "Scu" },
     { name: "Napolite", address: "unknown", symbol: "Nap" },
     { name: "Constantine", address: "unknown", symbol: "Con" },
     { name: "Scudite", address: "unknown", symbol: "Scu" },
@@ -91,7 +84,16 @@ function Homepage() {
                   <div>{from.symbol}</div>
                 </div>
                 <div>
-                  <input type="text" name="amount" />
+                  <input
+                    type="text"
+                    name="amount"
+                    value={amount}
+                    onChange={(e) =>
+                      e.target.value === ""
+                        ? setAmount(0)
+                        : setAmount(parseFloat(e.target.value))
+                    }
+                  />
                 </div>
               </div>
               <div className="swap-from-top">
@@ -125,7 +127,12 @@ function Homepage() {
                   </div>
                 </div>
                 <div>
-                  <input type="text" name="amount" />
+                  <input
+                    type="text"
+                    name="amount"
+                    readOnly={true}
+                    value={rate.toString()}
+                  />
                 </div>
               </div>
               <div className="swap-from-top">
