@@ -9,6 +9,7 @@
 }
 
 .slide-out {
+  display: block;
   padding: 17px 0;
   width: 20%;
   max-height: 62.4%;
@@ -31,19 +32,23 @@
 @keyframes slide-out {
   0% {
     margin-right: -272px;
+    display: none;
   }
 
   100% {
     margin-right: -40px;
+    display: block;
   }
 }
 
 @keyframes slide-in {
   0% {
     margin-right: -40px;
+    display: block;
   }
   100% {
     margin-right: -272px;
+    display: none;
   }
 }
 
@@ -57,7 +62,11 @@
 }
 
 .homepage {
-  background-color: white;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 5px 15px;
   width: 28%;
   height: 73.4%;
@@ -159,7 +168,7 @@
   background-color: rgb(211, 253, 225);
 }
 .swap-item:nth-child(2) {
-  /* background-color: rgb(211, 234, 253); */
+  background-color: #fa9cfc;
   border: 1px solid rgb(211, 234, 253);
 }
 
