@@ -11,11 +11,15 @@ function Main() {
 
   const connect = async () => {
     account === null ? setAccount(await connectWallet()) : null;
+    console.log(connectWallet());
+  };
+  const disconnect = async () => {
+    setAccount(null);
   };
   return (
     <div className="app-root">
       <div className="nav-bar">
-        <div onClick={connect}>
+        <div onClick={account === null ? connect : disconnect}>
           {account === null
             ? "Connect Wallet"
             : `${account[0].substring(0, 4)}...${account[0].substring(38, 42)}`}
