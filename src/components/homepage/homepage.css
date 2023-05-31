@@ -29,6 +29,11 @@
   place-items: center;
   padding: 0px 15px;
   margin-top: 7px;
+  font-size: 15px;
+}
+
+.token-bal {
+  font-size: 12px;
 }
 
 @keyframes slide-out {
@@ -55,8 +60,9 @@
 }
 
 .slide-out img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
 
 .slide-out > div:nth-child(even) {

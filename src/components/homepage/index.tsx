@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./homepage.css";
 
 import settings from "@/assets/images/settings-1389-svgrepo-com.svg";
-import eth from "@/assets/images/pngwing.com.png";
+import eth from "@/assets/images/eth.png";
 function Homepage() {
   interface Token {
     name: String;
@@ -164,7 +164,10 @@ function Homepage() {
             }}
           >
             <img src={eth} />
-            <div>{token.symbol}</div>
+            <div>
+              <div>{token.name}</div>
+              <div className="token-bal">$0</div>
+            </div>
           </div>
         ))}
       </div>
