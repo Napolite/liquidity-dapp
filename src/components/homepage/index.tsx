@@ -148,7 +148,13 @@ function Homepage() {
       </div>
 
       <div className="slide-out" ref={sliderRef}>
-        <div style={{ display: "fixed" }}>
+        <div
+        // style={{
+        //   display: "fixed",
+        //   backgroundColor: "transparent",
+        //   textAlign: "center",
+        // }}
+        >
           {selected === "From" ? "From" : "To"}
         </div>
         {tokens.map((token) => (

@@ -9,46 +9,48 @@
 }
 
 .slide-out {
-  visibility: hidden;
-  padding: 17px 0;
+  background: rgba(255, 255, 255, 0.23);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* visibility: hidden; */
   width: 20%;
-  max-height: 62.4%;
+  max-height: 69.4%;
   overflow-y: scroll;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: -272px;
-  margin-top: 15px;
+  margin-top: 17px;
   /* animation: slide-out 1s forwards; */
 }
 
-.slide-out div {
+.slide-out > div {
   width: 82.5%;
   height: 50px;
   display: flex;
   place-items: center;
   padding: 0px 15px;
+  margin-top: 7px;
 }
 
 @keyframes slide-out {
   0% {
     margin-right: -272px;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
 
   100% {
     margin-right: -40px;
-    visibility: visible;
+    /* visibility: visible; */
   }
 }
 
 @keyframes slide-in {
   0% {
     margin-right: -40px;
-    visibility: visible;
+    /* visibility: visible; */
   }
   100% {
     margin-right: -272px;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
 }
 
@@ -57,16 +59,23 @@
   height: 30px;
 }
 
-.slide-out div:nth-child(odd) {
+.slide-out > div:nth-child(even) {
   background-color: rgb(211, 234, 253);
+}
+
+.slide-out > div:nth-child(1) {
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .homepage {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.23);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
   padding: 5px 15px;
   width: 28%;
   height: 73.4%;
