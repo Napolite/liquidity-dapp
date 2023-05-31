@@ -9,7 +9,7 @@
 }
 
 .slide-out {
-  display: block;
+  visibility: hidden;
   padding: 17px 0;
   width: 20%;
   max-height: 62.4%;
@@ -32,23 +32,23 @@
 @keyframes slide-out {
   0% {
     margin-right: -272px;
-    display: none;
+    visibility: hidden;
   }
 
   100% {
     margin-right: -40px;
-    display: block;
+    visibility: visible;
   }
 }
 
 @keyframes slide-in {
   0% {
     margin-right: -40px;
-    display: block;
+    visibility: visible;
   }
   100% {
     margin-right: -272px;
-    display: none;
+    visibility: hidden;
   }
 }
 
